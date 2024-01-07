@@ -1,0 +1,662 @@
+/* My classes */
+
+:root {
+    --main-transition: all 0.5s;
+    --main-color: #00c3da;
+    --main-bg: #00c3da;
+}
+
+::selection {
+    color: white;
+    background: black;
+}
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+h1,
+h2,
+h3,
+z h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-bg {
+    background-color: var(--main-bg);
+}
+
+.move-light {
+    position: relative;
+    overflow: hidden;
+}
+
+.move-light::before {
+    content: '';
+    height: 100%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: rotate(0deg);
+    position: absolute;
+    right: 110%;
+    top: 0;
+    transition: all 1s;
+}
+
+.move-light:hover::before {
+    animation: movelightline 1s;
+}
+
+@keyframes movelightline {
+    form{
+        right: 110%;
+    }
+    to{
+        right: -50%;
+    }
+}
+
+/* Navbar */
+
+.nav-item .nav-link {
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    transition: var(--main-transition);
+}
+
+.nav-item .nav-link:hover {
+    color: gray;
+}
+
+.navbar-nav .nav-link.active {
+    color: gray;
+}
+
+.nav-icon-container {
+    border-left: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.nav-icon-container a {
+    color: black;
+    font-size: 14px;
+    transition: var(--main-transition);
+}
+
+.nav-icon-container a:hover {
+    color: gray;
+}
+
+/* Home */
+
+header .bg-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg-image-28.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+header .bg-2 {
+    background-image: linear-gradient(rgba(43, 43, 43, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg-image-29.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+header .carousel-item h2 {
+    font-size: 100px;
+    cursor: default;
+    letter-spacing: -2px;
+}
+
+header .carousel-item h5 {
+    font-size: 20px;
+    font-weight: 400;
+    cursor: default;
+}
+
+@media screen and (max-width: 992px) {
+    header .carousel-item h2 {
+        font-size: 45px;
+    }
+
+    header .carousel-item h5 {
+        font-size: 15px;
+    }
+}
+
+header .carousel-item .btn {
+    padding: 13px 30px;
+}
+
+header .carousel-item .btn1 {
+    background-color: var(--main-bg);
+    color: white;
+    font-weight: bold;
+    transition: var(--main-transition);
+}
+
+header .carousel-item .btn1:hover {
+    background-color: #00d6ee;
+    transform: translatey(-1px);
+}
+
+header .carousel-item .btn2 {
+    border: solid 1px white;
+    color: white;
+    font-weight: bold;
+    transition: var(--main-transition);
+}
+
+header .carousel-item .btn2:hover {
+    background-color: white;
+    color: black;
+    transform: translatey(-1px);
+}
+
+.btn-container1,
+.btn-container2 {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    position: absolute;
+    left: -2px;
+}
+
+.btn-container1 {
+    bottom: 50%;
+}
+
+.btn-container2 {
+    top: 50%;
+}
+
+.btn-container1 button:hover i,
+.btn-container2 button:hover i {
+    color: black;
+
+}
+
+.btn-layer {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: var(--main-transition);
+}
+
+.btn-container1:hover .btn-layer,
+.btn-container2:hover .btn-layer {
+    right: 0;
+}
+
+header .carousel-indicators [data-bs-target]:hover {
+    opacity: 1;
+}
+
+/* About */
+
+.about a {
+    font-size: 13px;
+    border: 1px solid rgb(201, 201, 201);
+    padding: 13px 30px;
+    transition: var(--main-transition);
+}
+
+.about div h6 {
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.about a:hover {
+    background-color: black;
+    border: 1px solid black;
+}
+
+.about span::after {
+    content: '|';
+    color: var(--main-color);
+    animation: word 5s infinite;
+
+}
+
+@keyframes word {
+    0% {
+        content: 's|';
+    }
+
+    2% {
+        content: 'so|';
+    }
+
+    4% {
+        content: 'sof|';
+    }
+
+    6% {
+        content: 'soft|';
+    }
+
+    8% {
+        content: 'softw|';
+    }
+
+    10% {
+        content: 'softwa|';
+    }
+
+    12% {
+        content: 'softwar|';
+    }
+
+    14% {
+        content: 'software|';
+    }
+
+    16% {
+        content: 'softwares|';
+    }
+
+    18% {
+        content: 'softwares|';
+    }
+
+    20% {
+        content: 'softwares|';
+    }
+
+    22% {
+        content: 'softwares|';
+    }
+
+    24% {
+        content: 'softwares|';
+    }
+
+    26% {
+        content: 'softwares|';
+    }
+
+    28% {
+        content: 'softwares|';
+    }
+
+    30% {
+        content: 'softwares|';
+    }
+
+    32% {
+        content: 'softwares|';
+    }
+
+    34% {
+        content: 'softwares|';
+    }
+
+    36% {
+        content: 'software|';
+    }
+
+    38% {
+        content: 'softwar|';
+    }
+
+    40% {
+        content: 'softwa|';
+    }
+
+    42% {
+        content: 'softw|';
+    }
+
+    44% {
+        content: 'soft|';
+    }
+
+    46% {
+        content: 'sof|';
+    }
+
+    48% {
+        content: 'so|';
+    }
+
+    50% {
+        content: 's|';
+    }
+
+    52% {
+        content: '|';
+    }
+
+    54% {
+        content: '|';
+    }
+
+    56% {
+        content: 'a|';
+    }
+
+    58% {
+        content: 'ap|';
+    }
+
+    60% {
+        content: 'app|';
+    }
+
+    62% {
+        content: 'apps|';
+    }
+
+    64% {
+        content: 'apps|';
+    }
+
+    66% {
+        content: 'apps|';
+    }
+
+    68% {
+        content: 'apps|';
+    }
+
+    70% {
+        content: 'app|';
+    }
+
+    72% {
+        content: 'ap|';
+    }
+
+    74% {
+        content: 'a|';
+    }
+
+    76% {
+        content: '|';
+    }
+
+    78% {
+        content: 'w|';
+    }
+
+    80% {
+        content: 'we|';
+    }
+
+    82% {
+        content: 'web|';
+    }
+
+    84% {
+        content: 'websi|';
+    }
+
+    86% {
+        content: 'websit|';
+    }
+
+    88% {
+        content: 'websites|';
+    }
+
+    90% {
+        content: 'websites|';
+    }
+
+    92% {
+        content: 'websites|';
+    }
+
+    94% {
+        content: 'websit|';
+    }
+
+    96% {
+        content: 'webs|';
+    }
+
+    98% {
+        content: 'we|';
+    }
+
+    100% {
+        content: '|';
+    }
+}
+
+/* Team */
+
+.team {
+    border-top: 1px solid #eee
+}
+
+.section-titel h2 {
+    letter-spacing: -1px;
+}
+
+.team .team-layer {
+    background-color: var(--main-bg);
+    top: 10%;
+    left: 0;
+    opacity: 0;
+    transition: var(--main-transition);
+}
+
+.team .team-member:hover .team-layer {
+    top: 0;
+    opacity: 0.9;
+}
+
+.team-layer i {
+    color: rgb(231, 231, 231);
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.team-layer i:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.team-layer div p {
+    font-size: 14px;
+}
+
+/* Services */
+
+.services {
+    background-color: #1f1f1f;
+    opacity: 0.7;
+}
+
+.services h6 {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.our-services p {
+    position: relative;
+}
+
+.our-services p::before {
+    font-family: FontAwesome;
+    content: '\f00c';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: absolute;
+    right: 105%;
+    top: 50%;
+    transform: translatey(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+}
+
+/* Prices */
+
+.pricing {
+    background-color: #f7f7f7;
+}
+
+.pricing button {
+    background-color: var(--main-bg);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: var(--main-transition);
+}
+
+.pricing button:hover {
+    background-color: #00d6ee;
+    transform: translatey(-1px);
+    color: white;
+}
+
+.pricing .container h2 {
+    position: relative;
+}
+
+.pricing .container h2::before {
+    content: '$';
+    color: black;
+    font-size: 25px;
+    position: absolute;
+    top: -5px;
+    left: -12px;
+}
+
+.pricing .container h2.best,
+.pricing .container h2.best::before {
+    color: var(--main-color);
+}
+
+.pricing .best-value {
+    background-color: var(--main-bg);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+.pricing .container .best-container {
+    margin-top: -25px;
+}
+
+/* carousel  */
+
+.carousel-section {
+    background-color: #f7f7f7;
+}
+
+.carousel-section .carousel-item div {
+    width: 60%;
+    cursor: default;
+}
+
+.carousel-section .carousel-item h3 {
+    letter-spacing: -1px;
+}
+
+.carousel-section .carousel-item h6,
+.carousel-section span {
+    letter-spacing: 1px;
+}
+
+.carousel-section button {
+    width: fit-content;
+    height: fit-content;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-section button i {
+    color: gray;
+    font-size: 30px;
+    transition: var(--main-transition);
+}
+
+.carousel-section button i.fa-arrow-right:hover {
+    color: var(--main-color);
+    transform: translate(5px);
+}
+
+.carousel-section button i.fa-arrow-left:hover {
+    color: var(--main-color);
+    transform: translate(-5px);
+}
+
+.carousel-section .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: gray;
+    opacity: 0.2;
+    transition: var(--main-transition);
+}
+
+.carousel-section .carousel-indicators .active {
+    background-color: var(--main-bg);
+    opacity: 1;
+}
+
+/* Contact */
+
+footer form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+footer iframe {
+    min-height: 400px;
+}
+
+footer form input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+footer form textarea {
+    margin-bottom: 20px;
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    height: 120px;
+    padding: 20px;
+    resize: none;
+}
+
+footer form .btn {
+    background-color: var(--main-bg);
+    color: white;
+    width: 35%;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+    transition: var(--main-transition);
+}
+
+footer form .btn:hover {
+    background-color: #00d6ee;
+    transform: translatey(-1px);
+    color: white;
+}
